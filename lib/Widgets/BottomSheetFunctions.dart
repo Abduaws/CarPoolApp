@@ -261,7 +261,7 @@ Future displayDriverProfileBottomSheet(BuildContext context, name, phone, carTyp
                       if(formKey.currentState!.validate()){
                         driverData['FullName'] = nameController.text;
                         driverData['Phone'] = phoneController.text;
-                        driverData['carType'] = carTypeController.text;
+                        driverData['CarType'] = carTypeController.text;
                         await firebaseDatabase.child("drivers/${firebaseAuth.currentUser?.uid}").set(driverData);
                         Navigator.pop(context);
                       }             
@@ -573,7 +573,7 @@ Future displayConfirmRouteBottomSheet(BuildContext context, from, to, passengerC
                         "to": to,
                         "DropOffTime": "${int.parse(timeController.text[0]) + 1}:00 AM",
                         "Price":"${priceController.text}",
-                        "CarType": userInfo['carType'], 
+                        "CarType": userInfo['CarType'], 
                         "Status":'Available', 
                         "Duration":'- min',
                         "MaxPassengerCount": passengerController.text,

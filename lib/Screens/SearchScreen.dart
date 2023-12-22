@@ -86,7 +86,7 @@ class _SearchScreenState extends State<SearchScreen> {
       bookedRides.forEach((entryID, bookedRideId) {
         if(bookedRideId == route){bookedCheck = true; }
       });
-      if(completedCheck || fullCheck || cancelledCheck || startedCheck || bookedCheck || rideDate.isBefore(DateTime.now())){}
+      if(completedCheck || fullCheck || cancelledCheck || startedCheck || bookedCheck || rideDate.add(const Duration(days: 1)).isBefore(DateTime.now())){}
       else if((fromCheck || toCheck) && (availableCheck || confirmedCheck)){
         routeList.add(
           GestureDetector(

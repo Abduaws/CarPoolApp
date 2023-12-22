@@ -90,7 +90,7 @@ class _ProfileScreenDriverState extends State<ProfileScreenDriver> {
                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
                                 ),
                               onPressed: (){
-                                displayDriverProfileBottomSheet(context, snapshot.data!['FullName'].toString(), snapshot.data!['Phone'].toString(), snapshot.data!['carType'].toString(), snapshot.data);
+                                displayDriverProfileBottomSheet(context, snapshot.data!['FullName'].toString(), snapshot.data!['Phone'].toString(), snapshot.data!['CarType'].toString(), snapshot.data);
                               }, 
                               child: Text("Edit Profile", style: TextStyle(color: const Color(0xff1E1E32), fontFamily: GoogleFonts.openSans().fontFamily))
                             ),
@@ -161,7 +161,7 @@ class _ProfileScreenDriverState extends State<ProfileScreenDriver> {
                             SizedBox(width: screenWidth * .02),
                             const Icon(Icons.drive_eta_rounded),
                             SizedBox(width: screenWidth * .02),
-                            Text(snapshot.data!['carType'].toString(), textAlign: TextAlign.center, style: TextStyle(color: const Color(0xff1E1E32), fontSize: 16, fontFamily: GoogleFonts.openSans().fontFamily, fontWeight: FontWeight.bold)),
+                            Text(snapshot.data!['CarType'].toString(), textAlign: TextAlign.center, style: TextStyle(color: const Color(0xff1E1E32), fontSize: 16, fontFamily: GoogleFonts.openSans().fontFamily, fontWeight: FontWeight.bold)),
                           ],
                         ),
                       ),

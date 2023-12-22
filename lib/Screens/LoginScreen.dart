@@ -91,6 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             return 'Field Cannot Be Empty!';
                           }
                           else if(!RegExp(r'[1-9]\dp\d\d\d\d@eng\.asu\.edu\.eg').hasMatch(emailController.text)){
+                            if(RegExp(r'test@eng\.asu\.edu\.eg').hasMatch(emailController.text)){return null;}
                             return 'Email has Incorrect Format!';
                           }
                           else if(exceptionFired){

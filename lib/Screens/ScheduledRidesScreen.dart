@@ -25,7 +25,9 @@ class _ScheduledRidesScreenState extends State<ScheduledRidesScreen> {
       DataSnapshot dataSnapshot = await firebaseDatabase.child("routes/$rideID").get();
       Map<Object?, Object?> rideInfo = dataSnapshot.value as Map<Object?, Object?>;
       DateTime rideDate = DateTime.parse(rideInfo['PickUpDate'] as String);
-      if(rideDate.isBefore(DateTime.now()) && rideInfo['Status'] != 'Completed' ){
+      bool continueCheck = false;
+      if(rideDate.add(const Duration(days: 1)).isBefore(DateTime.now()) && rideInfo['Status'] != 'Completed' ){
+        continueCheck = true;
         rideInfo['Status'] = 'Cancelled';
         await firebaseDatabase.child("routes/$rideID").set(rideInfo);
         await firebaseDatabase.child("drivers/${firebaseAuth.currentUser?.uid}/history").push().set(rideInfo);
@@ -52,7 +54,7 @@ class _ScheduledRidesScreenState extends State<ScheduledRidesScreen> {
           continue;
         }
       }
-      if(rideInfo['Status'] == 'Completed' || rideInfo['Status'] == 'Cancelled'){continue;}
+      if(rideInfo['Status'] == 'Completed' || rideInfo['Status'] == 'Cancelled' || continueCheck){continue;}
       rideList.add(
         generateScheduledRideCard(context, screenWidth, rideInfo, rideID)
       );
