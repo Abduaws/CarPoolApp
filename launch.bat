@@ -1,0 +1,1 @@
+"c:\Users\Abduaws\AppData\Local\Android\Sdk\emulator\emulator.exe" -avd Pixel_6_Oreo -dns-server 8.8.8.8
