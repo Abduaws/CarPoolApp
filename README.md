@@ -1,18 +1,59 @@
 # ZeroPool
 
-Ride Sharing Flutter project.
+A Flutter-based mobile application designed to facilitate carpooling services. The application provides features for both passengers and drivers, including booking rides, managing profiles, and handling payments.
 
-## Getting Started
+## Table of Contents
 
-ZeroPool is a rideshare application designed to facilitate rideshare service to
-customers. carpool can be used by students to share rides to or from AinShams campus. In this
-version of the application, we’ll create a customized version for Faculty of Engineering Community
-at Ainshams University. We’ll focus on ride to or from Abdu-Basha and Abbaseya square. Users
-must sign in with an active account @eng.asu.edu.eg to build a trusted closed community.
+- [Features](#features)
+- [Screens](#screens)
+- [Installation](#installation)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- User authentication (login and registration) for passengers and drivers.
+- Profile management for users.
+- Booking and managing rides.
+- Viewing ride history and billing information.
+- Map integration for tracking rides.
+- Scheduling rides in advance.
+
+## Screens
+
+The application consists of the following screens:
+
+### Passenger Screens
+- **WelcomeScreen**: Introduction to the app.
+- **LoginScreen**: User login interface.
+- **RegisterScreen**: User registration interface.
+- **MainScreen**: Main dashboard for passengers.
+- **ProfileScreen**: View and edit user profile.
+- **BillingScreen**: View billing information.
+- **HistoryScreen**: View ride history.
+- **MapScreen**: Interactive map for ride tracking.
+- **SearchScreen**: Search for rides.
+- **TrackOrderScreen**: Track ongoing rides.
+- **PaymentScreen**: Manage payment options.
+- **BookedRidesScreen**: View booked rides.
+
+### Driver Screens
+- **LoginScreenDriver**: Driver login interface.
+- **RegisterScreenDriver**: Driver registration interface.
+- **MainScreenDriver**: Main dashboard for drivers.
+- **DriverProfileScreen**: View and edit driver profile.
+- **DriverBillingScreen**: View billing information for drivers.
+- **DriverHistoryScreen**: View ride history for drivers.
+- **ScheduleScreenDriver**: Schedule rides for drivers.
+- **ScheduleTypeScreen**: Select type of schedule for rides.
+- **ScheduledRidesScreen**: View scheduled rides.
+- **DriverHistoryInfoScreen**: Detailed view of driver history.
+
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/carpool_demo.git
+2. Install Dependencies:
+   ```bash
+   flutter pub get
